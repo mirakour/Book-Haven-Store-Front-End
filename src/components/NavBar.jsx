@@ -1,26 +1,22 @@
-import { Link, useNavigate } from 'react-router-dom'
-import { useEffect, useState } from 'react'
+import { Link, useNavigate } from "react-router-dom";
 
 function NavBar() {
-  const [loggedIn, setLoggedIn] = useState(false)
-  const navigate = useNavigate()
+  const token = localStorage.getItem("token");
+  const navigate = useNavigate();
 
-  useEffect(() => {
-    setLoggedIn(!!localStorage.getItem('token'))
-  }, [])
-
-  function logout() {
-    localStorage.removeItem('token')
-    setLoggedIn(false)
-    navigate('/login')
-  }
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    navigate("/login");
+  };
 
   return (
-    <nav style={{ display: 'flex', gap: '1rem', padding: '1rem' }}>
-      <Link to="/products">📚 Book Haven</Link>
-      <Link to="/account">Account</Link>
-      {loggedIn ? (
-        <button onClick={logout}>Logout</button>
+    <nav style={{ display: "flex", gap: "1rem", padding: "1rem" }}>
+      <Link to="/books">Book Haven</Link>
+      {token ? (
+        <>
+          <Link to="/account">Account</Link>
+          <button onClick={handleLogout}>Logout</button>
+        </>
       ) : (
         <>
           <Link to="/login">Login</Link>
@@ -28,7 +24,7 @@ function NavBar() {
         </>
       )}
     </nav>
-  )
+  );
 }
 
-export default NavBar
+export default NavBar;
