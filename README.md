@@ -1,12 +1,48 @@
-# React + Vite
+# 📚 Book Haven – Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Book Haven is a responsive, full-stack book store web application where users can browse books, leave reviews, and place orders. This repo contains the **React frontend** built with Vite.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🔍 Book catalog with search functionality
+- 🧾 Book details with synopsis, image, and price
+- ✍️ Authenticated review system (1–5 stars)
+- 🛒 Authenticated order placement with quantity and note
+- 🔐 JWT-based login/register system
+- 👤 User dashboard to view reviews and cancel orders
+- 💻 Responsive layout with hover animations and dark theme
+- 🎨 Consistent styling across components
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React 19** (with React Router)
+- **Vite**
+- **Custom CSS** (dark theme with dynamic hover effects)
+- **JWT Authentication**
+- **REST API** (connects to Express/PostgreSQL backend)
+
+📂 Project Structure
+bash
+Copy
+Edit
+src/
+├── api/               # API helper functions
+├── assets/            # Static assets 
+├── components/        # Shared components (NavBar, ProtectedRoute)
+├── pages/             # Page-level views (Books, BookDetails, Login, Register, Account)
+├── App.jsx            # Main layout with routing
+├── main.jsx           # App entry point
+├── App.css, index.css # Global styling
+
+
+📦 Repos
+
+🔗 Back-End : https://github.com/mirakour/Book-Haven-Store-Back-End.git
+🔗 Front-End : https://github.com/mirakour/Book-Haven-Store-Front-End.git
+
+
+👩‍💻 Developer
+KOURTNEY MIRANDA
+Git: mirakour
+LinkedIn: www.linkedin.com/in/kourtneymiranda
+Email: mirandakourt@gmail.com
